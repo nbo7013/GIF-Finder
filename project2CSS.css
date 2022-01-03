@@ -1,0 +1,206 @@
+@font-face {
+    font-family: ubuntu;
+    src: url(fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: mplus1;
+    src: url(fonts/M_PLUS_1/static/MPLUS1-Regular.ttf);
+}
+
+*{
+    font-family: "ubuntu", "mplus1", sans-serif;
+}
+
+body{
+    background: white;
+    background: linear-gradient(0deg, white 0%, rgba(121,9,118,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ header{
+     background: url(images/cats.jpg);
+     background-repeat: repeat-x;
+     height:195px;
+ }
+
+ header h1{
+     margin:0;
+     color:white;
+     text-align:center;
+     font-size: 64px;
+     padding-top: 35px;
+ }
+
+ #status{
+     width: 100%;
+     font-style: italic;
+     height:32px;
+     text-align: center;
+     font-size: 18px;
+     margin-top: 10px;
+ }
+
+ .result {
+    flex: 1 1 auto;
+    display: inline-block;
+    text-align: center;
+    padding:5px;
+    margin-left:10px;
+    margin-bottom:10px;
+    height: 200px;
+    overflow: visible;
+}
+
+.result audio{
+    width: 130px;
+}
+
+.result p {
+    color: black;
+    font-size: 18px;
+}
+
+.result img {
+    width: 100%;
+}
+
+button{
+    display : inline-block;
+    cursor : pointer;
+    width: 100%;
+    border-style : groove;
+    border-width : 1px;
+    border-radius : 100px;
+    padding : 10px 18px;
+    font-size : 9.5pt;
+    font-weight : bold;
+    color : #fff;
+    text-shadow : 0 1px 3px rgba(0,0,0,.4);
+    font-family : sans-serif;
+    text-decoration : none;
+}
+
+button.green{
+    border-color: #0508ac;
+      background: #0078c8;
+      background: linear-gradient(top, #0057c8 0%,#00318c 100%);
+}
+
+button:hover{
+    background: #00c3dd;
+}
+
+button:active{
+    background: #0004ff;
+    box-shadow : 0 0 6px rgba(0,0,0,.6);
+}
+
+button:focus {outline:0;}
+
+#grid {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 10fr;
+    grid-template-areas: "header"
+                         "search"
+                         "results";
+}
+
+header{
+    grid-area: header;
+}
+
+#search {
+    grid-area: search;
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: bold;
+}
+
+.term-tool1, .term-tool2 {
+    width: 40%;
+    display: flex;
+    justify-content: right;
+    margin: 15px;
+    height: 48px;
+    align-items: center;
+}
+
+.numb-tool, .srch-flter {
+    width: 40%;
+    display: flex;
+    justify-content: left;
+    margin: 15px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.srch-tool {
+    width: 30%;
+}
+
+
+
+#results {
+    grid-area: results;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+#rating{
+    color: white;
+}
+
+#content {
+    display: flex;
+    flex-flow: row wrap;
+    width: 70%;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+#content::after {
+    content: "";
+    flex: 20 0 auto;
+}
+/* Credit to: https://stackoverflow.com/questions/18744164/flex-box-align-last-row-to-grid
+This allows me to use flex grow but have the last row not fill up. */
+
+#content p {
+    width: 100%;
+}
+
+h2 {
+    font-size: xxx-large;
+}
+
+input[type=text]{
+    background-color: rgba(255, 255, 255, 0.3);
+    background-image: url('images/search-icon.png');
+    background-repeat: no-repeat;
+    background-size: 48px;
+    background-position-x: 5px;
+    padding-left: 48px;
+    border-radius: 25px;
+    font-size: 24px;
+}
+
+#searchterm1, #searchterm2 {
+    height: 42px;
+    margin-left: 15px;
+}
+
+#limit, #filter {
+    background-color: rgba(0, 0, 0, 0);
+    height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}

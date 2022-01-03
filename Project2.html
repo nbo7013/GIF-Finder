@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="utf-8" />
+ 	    <title>Project 2</title>
+ 	    <link rel="stylesheet" href="project2CSS.css">
+        <script src="javaScripts/project2Java.jsx"></script>  
+    </head>
+    <body>
+        <section id="grid">
+            <header>
+                <h1>Find Your Gif!</h1>
+            </header>
+            
+            <section id= "search">
+                <div class="term-tool1">
+                    Search Term 1:
+                    <input id="searchterm1" type="text" size="20" maxlength="20" autofocus/>
+                </div>
+        
+                <div class="numb-tool">
+                    <p>Get The First
+                        <select id="limit">
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select> 
+                    GIFs</p>
+                </div>
+        
+                <div class="term-tool2">
+                    Search Term 2:
+                    <input id="searchterm2" type="text" size="20" maxlength="20"/>
+                </div>
+
+                <div class="srch-flter">
+                    <p>Filter the GIFS 
+                        <select id="filter">
+                            <option value="normal" selected> Normally</option>
+                            <option value="size"> By Size</option>
+                            <option value="rating"> By Rating</option>
+                        </select>
+                    </p>
+                </div>
+
+                <div class="srch-tool">
+                    <button type="button" id="srch-button" class="green">Search</button>
+                </div>
+
+                <div id="status">Ready to Search!</div>
+            </section>
+            
+            <section id="results">            
+                <div id="content">
+                    <p>No data yet!</p>
+                </div>
+            </section>
+        </section>
+        <script src="javaScripts/localStorage.jsx"></script>
+    </body>
+</html>
